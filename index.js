@@ -6,7 +6,7 @@ function getData() {
   console.log(searchInput);
   const moviesWrapper = document.querySelector(".movies");
   let html = "";
-  fetch(`http://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
+  fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
     .then((response) => response.json())
     .then((data) => {
       data.Search.forEach((movie) => {
