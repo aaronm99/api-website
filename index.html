@@ -27,7 +27,12 @@
     <header>
       <h1 class="heading">Browse Our Movies</h1>
       <div class="input--wrapper">
-        <input type="text" class="input" placeholder="Search by Title" />
+        <input
+          type="text"
+          class="input"
+          placeholder="Search by Title"
+          onkeypress="return searchKeyPress(event);"
+        />
         <button type="submit" id="search--btn" class="search--btn">
           <i class="fas fa-search"></i>
         </button>
