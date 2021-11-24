@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  background-color: #6030b1;
+  color: white;
+  border-radius: 24px;
+  padding: 8px 24px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 120px 0;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.logo {
+  display: flex;
+  width: 50px;
+}
+
+.logo--img {
+  width: 100%;
+}
+
+.nav__link {
+  margin-left: 32px;
+  font-size: 20px;
+}
+
+.nav__banner {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav__banner--img {
+  position: absolute;
+  z-index: -10;
+}
+
+/* HEADER  */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 72px;
+  padding-bottom: 32px;
+  letter-spacing: 0.1rem;
+}
+
+.input--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border: 2px solid grey;
+  width: 100%;
+  max-width: 550px;
+  height: 48px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.input {
+  border: none;
+  height: 100%;
+  width: 85%;
+  font-size: 24px;
+  padding-left: 16px;
+  color: #242424;
+}
+
+.input::placeholder {
+  font-size: 24px;
+}
+
+.search--btn {
+  margin-right: 6px;
+  padding: 6px 28px;
+}
+
+.fa-search {
+  font-size: 36px;
+}
+
+/* MOVIES  */
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  margin-bottom: 48px;
+}
+
+.movie__title {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.movie__img--wrapper {
+  display: flex;
+  max-width: 240px;
+  margin-bottom: 12px;
+}
+
+.movie__img {
+  width: 100%;
+}
