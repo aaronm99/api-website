@@ -3,13 +3,20 @@ search_btn.addEventListener("click", getData);
 
 function getData() {
   let searchInput = document.querySelector("input").value;
-  console.log(searchInput);
+  let results = document.querySelector(".result__txt");
+  results.innerHTML = `Results for "${searchInput}"`;
+
   const moviesWrapper = document.querySelector(".movies");
   let html = "";
+
   fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
     .then((response) => response.json())
     .then((data) => {
       data.Search.forEach((movie) => {
+        if (movie.Poster == "N/A") {
+          movie.Poster = "./assets/notavailable.png";
+        }
+
         html += `<div class="movie">
                   <figure class="movie__img--wrapper">
                     <img

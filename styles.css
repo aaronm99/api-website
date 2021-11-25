@@ -27,7 +27,7 @@ button {
 }
 
 .container {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .row {
@@ -151,4 +151,8 @@ header {
 
 .movie__img {
   width: 100%;
+}
+
+.result__txt {
+  padding: 20px 0;
 }
