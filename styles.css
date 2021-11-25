@@ -179,3 +179,27 @@ header {
   padding-top: 20px;
   color: lightgray;
 }
+
+.loading__container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #6030b1;
+}
+
+.fa-spinner {
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

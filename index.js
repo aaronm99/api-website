@@ -6,11 +6,13 @@ function getData() {
   let results = document.querySelector(".result__txt");
   let empty = document.querySelector(".empty__container");
   let movies = document.querySelector(".movies");
+  let loading = document.querySelector(".loading__container");
+  const moviesWrapper = document.querySelector(".movies");
 
   results.innerHTML = `Results for "${searchInput}"`;
 
-  const moviesWrapper = document.querySelector(".movies");
   let html = "";
+  loading.style.display = "flex";
 
   fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
     .then((response) => response.json())
@@ -18,6 +20,7 @@ function getData() {
       try {
         data.Search.forEach((movie) => {
           if (movie) {
+            loading.style.display = "none";
             movies.style.display = "flex";
             empty.style.display = "none";
           }
@@ -41,6 +44,7 @@ function getData() {
       } catch (e) {
         empty.style.display = "flex";
         movies.style.display = "none";
+        loading.style.display = "none";
       }
     });
 }
