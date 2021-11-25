@@ -27,7 +27,7 @@ button {
 }
 
 .container {
-  padding: 80px 0;
+  padding: 48px 0 24px 0;
 }
 
 .row {
@@ -154,7 +154,7 @@ header {
 }
 
 .result__txt {
-  padding: 20px 0;
+  padding: 20px 0 72px 0;
 }
 
 /* EMPTY STATE */
