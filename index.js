@@ -4,6 +4,9 @@ search_btn.addEventListener("click", getData);
 function getData() {
   let searchInput = document.querySelector("input").value;
   let results = document.querySelector(".result__txt");
+  let empty = document.querySelector(".empty__container");
+  let movies = document.querySelector(".movies");
+
   results.innerHTML = `Results for "${searchInput}"`;
 
   const moviesWrapper = document.querySelector(".movies");
@@ -12,12 +15,17 @@ function getData() {
   fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
     .then((response) => response.json())
     .then((data) => {
-      data.Search.forEach((movie) => {
-        if (movie.Poster == "N/A") {
-          movie.Poster = "./assets/notavailable.png";
-        }
+      try {
+        data.Search.forEach((movie) => {
+          if (movie) {
+            movies.style.display = "flex";
+            empty.style.display = "none";
+          }
 
-        html += `<div class="movie">
+          if (movie.Poster == "N/A") {
+            movie.Poster = "./assets/notavailable.png";
+          }
+          html += `<div class="movie">
                   <figure class="movie__img--wrapper">
                     <img
                       class="movie__img"
@@ -28,8 +36,12 @@ function getData() {
                   <h2 class="movie__title">${movie.Title}</h2>
                   <div class="movie__year">${movie.Year}</div>
                 </div>`;
-        moviesWrapper.innerHTML = html;
-      });
+          moviesWrapper.innerHTML = html;
+        });
+      } catch (e) {
+        empty.style.display = "flex";
+        movies.style.display = "none";
+      }
     });
 }
 
