@@ -35,6 +35,10 @@ button {
   margin: 0 auto;
 }
 
+.unclickable {
+  cursor: not-allowed;
+}
+
 /* NAV */
 
 nav {
@@ -211,6 +215,18 @@ header {
   }
 }
 
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  .movie {
+    width: 50%;
+  }
+
+  .result__txt {
+    margin-left: 12px;
+    padding: 0 0 16px 24px;
+  }
+}
+
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
   .input--wrapper {
@@ -233,5 +249,18 @@ header {
 
   .nav__link {
     display: none;
+  }
+
+  .movie__img--wrapper {
+    justify-content: center;
+  }
+
+  .movie__img {
+    width: 80%;
+  }
+
+  .movie__title {
+    font-size: 18px;
+    margin: 0 8px 8px;
   }
 }
