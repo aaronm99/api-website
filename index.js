@@ -14,6 +14,7 @@ function getData() {
 
   let html = "";
   loading.style.display = "flex";
+  movies.style.display = "flex";
   skeleton();
 
   fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
@@ -23,7 +24,6 @@ function getData() {
         data.Search.forEach((movie) => {
           if (movie) {
             loading.style.display = "none";
-            movies.style.display = "flex";
           }
 
           if (movie.Poster == "N/A") {

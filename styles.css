@@ -160,7 +160,7 @@ header {
 /* MOVIES  */
 
 .movies {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
