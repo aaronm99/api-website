@@ -1,4 +1,5 @@
 const search_btn = document.getElementById("search--btn");
+const moviesWrapper = document.querySelector(".movies");
 search_btn.addEventListener("click", getData);
 
 function getData() {
@@ -7,12 +8,12 @@ function getData() {
   let empty = document.querySelector(".empty__container");
   let movies = document.querySelector(".movies");
   let loading = document.querySelector(".loading__container");
-  const moviesWrapper = document.querySelector(".movies");
 
   results.innerHTML = `Results for "${searchInput}"`;
 
   let html = "";
   loading.style.display = "flex";
+  skeleton();
 
   fetch(`https://www.omdbapi.com/?apikey=6a434c95&s='${searchInput}'`)
     .then((response) => response.json())
@@ -57,4 +58,13 @@ function searchKeyPress(e) {
     return false;
   }
   return true;
+}
+
+function skeleton() {
+  skeletonhtml = `<div class="movie">
+                    <div class="skeleton-poster skeleton"></div>
+                    <div class="skeleton-title skeleton"></div>
+                    <div class="skeleton-year skeleton"></div>
+            </div>`;
+  moviesWrapper.innerHTML = skeletonhtml.repeat(10);
 }

@@ -39,6 +39,37 @@ button {
   cursor: not-allowed;
 }
 
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 10%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 10%, 95%);
+  }
+}
+
+.skeleton-poster {
+  width: 240px;
+  height: 355px;
+}
+
+.skeleton-title {
+  margin-top: 12px;
+  width: 70%;
+  height: 24px;
+}
+
+.skeleton-year {
+  margin-top: 8px;
+  width: 20%;
+  height: 16px;
+}
+
 /* NAV */
 
 nav {
