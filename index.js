@@ -69,3 +69,11 @@ function skeleton() {
   moviesWrapper.innerHTML = skeletonhtml.repeat(10);
   empty.style.display = "none";
 }
+
+function openMenu() {
+  document.body.classList += "menu--open";
+}
+
+function closeMenu() {
+  document.body.classList.remove("menu--open");
+}

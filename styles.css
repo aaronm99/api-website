@@ -107,6 +107,53 @@ nav {
   z-index: -10;
 }
 
+.btn--menu {
+  position: absolute;
+  right: 18px;
+  padding: 12px 24px;
+  z-index: 100;
+  display: none;
+}
+
+.btn--menu--close {
+  top: 4px;
+  right: 6px;
+  display: block !important;
+}
+
+.menu--backdrop {
+  border: 2px solid #242424;
+  background-color: white;
+  height: 300px;
+  width: 95%;
+  top: 16px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-150%);
+  transition: all 300ms ease;
+}
+
+.menu--open .menu--backdrop {
+  transform: translateY(0);
+}
+
+.menu--open .btn--menu {
+  display: none;
+}
+
+.btn--menu--list {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn--menu--link {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
 /* HEADER  */
 
 header {
@@ -260,6 +307,10 @@ header {
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
+  .btn--menu {
+    display: block;
+  }
+
   .input--wrapper {
     width: 80%;
   }

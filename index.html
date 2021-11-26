@@ -16,6 +16,9 @@
       <a href="" class="logo">
         <img class="logo--img" src="./assets/movielogo.png" alt="" />
       </a>
+      <button class="btn--menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="nav--list">
         <a class="nav__link" href="">Home</a>
         <a class="nav__link unclickable" href="#">Discover</a>
@@ -25,6 +28,20 @@
       </ul>
     </nav>
     <header>
+      <div class="menu--backdrop">
+        <button class="btn--menu btn--menu--close" onclick="closeMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="btn--menu--list">
+          <a href="" class="btn--menu--link">Home</a>
+          <a href="#" class="btn--menu--link unclickable" onclick="closeMenu()"
+            >Discover</a
+          >
+          <a href="#" class="btn--menu--link unclickable" onclick="closeMenu()"
+            >Contact</a
+          >
+        </ul>
+      </div>
       <h1 class="heading">Browse Our Movies</h1>
       <div class="input--wrapper">
         <input
