@@ -1,11 +1,12 @@
 const search_btn = document.getElementById("search--btn");
 const moviesWrapper = document.querySelector(".movies");
+let empty = document.querySelector(".empty__container");
 search_btn.addEventListener("click", getData);
 
 function getData() {
   let searchInput = document.querySelector("input").value;
   let results = document.querySelector(".result__txt");
-  let empty = document.querySelector(".empty__container");
+
   let movies = document.querySelector(".movies");
   let loading = document.querySelector(".loading__container");
 
@@ -23,7 +24,6 @@ function getData() {
           if (movie) {
             loading.style.display = "none";
             movies.style.display = "flex";
-            empty.style.display = "none";
           }
 
           if (movie.Poster == "N/A") {
@@ -65,6 +65,7 @@ function skeleton() {
                     <div class="skeleton-poster skeleton"></div>
                     <div class="skeleton-title skeleton"></div>
                     <div class="skeleton-year skeleton"></div>
-            </div>`;
+                  </div>`;
   moviesWrapper.innerHTML = skeletonhtml.repeat(10);
+  empty.style.display = "none";
 }
