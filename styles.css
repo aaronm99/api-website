@@ -375,6 +375,7 @@ header {
 
 .top--movie__img--wrapper {
   width: 70%;
+  margin-bottom: 8px;
 }
 .top--movie__img {
   width: 100%;
