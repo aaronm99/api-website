@@ -390,3 +390,7 @@ select {
   font-weight: bold;
   color: #6030b1;
 }
+
+#movies .movie {
+  justify-content: start;
+}
