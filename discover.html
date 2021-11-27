@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Movie API</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">
+        <img class="logo--img" src="./assets/movielogo.png" alt="" />
+      </a>
+      <button class="btn--menu" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav--list">
+        <a class="nav__link" href="">Home</a>
+        <a class="nav__link" href="discover.html">Discover</a>
+        <a class="nav__link" href="#">
+          <button class="unclickable">Contact</button>
+        </a>
+      </ul>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="header__container">
+            <h1 class="top--heading">Top 100</h1>
+            <select id="filter" onchange="filterType(event)">
+              <option selected disabled>Choose</option>
+              <option value="MOVIES">Movies</option>
+              <option value="SHOWS">Shows</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="movies">
+      <!-- <div class="movie">
+        <figure class="movie__img--wrapper">
+          <img class="movie__img" src="./assets/detectivepikachu.jpg" alt="" />
+        </figure>
+        <h2 class="movie__title">Detective Pikachu</h2>
+        <div class="movie__year">2019</div>
+      </div> -->
+    </section>
+  </body>
+</html>
+
+<script src="discover.js"></script>
