@@ -13,7 +13,7 @@ function getData() {
   results.innerHTML = `Results for "${searchInput}"`;
 
   let html = "";
-  loading.style.display = "flex";
+  // loading.style.display = "flex";
   movies.style.display = "flex";
   skeleton();
 
@@ -23,7 +23,7 @@ function getData() {
       try {
         data.Search.forEach((movie) => {
           if (movie) {
-            loading.style.display = "none";
+            // loading.style.display = "none";
           }
 
           if (movie.Poster == "N/A") {
@@ -45,7 +45,7 @@ function getData() {
       } catch (e) {
         empty.style.display = "flex";
         movies.style.display = "none";
-        loading.style.display = "none";
+        // loading.style.display = "none";
       }
     });
 }
